@@ -53,7 +53,7 @@ builder.Services.AddHttpClient();
 
 var app = builder.Build();
 app.MapGet("/", SendGreeting);
-app.MapGet("/NestedGreeting", SendNestedGreeting);
+app.MapGet("/NestedGreeting", SendNestedGreeting); // http://localhost:5070/NestedGreeting?nestlevel=5
 app.MapPrometheusScrapingEndpoint();
 
 app.Run();
