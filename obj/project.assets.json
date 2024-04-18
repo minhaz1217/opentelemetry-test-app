@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net6.0": {
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "compile": {
@@ -402,12 +402,12 @@
           "OpenTelemetry": "1.5.0"
         },
         "compile": {
-          "lib/net7.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
+          "lib/net6.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
+          "lib/net6.0/OpenTelemetry.Instrumentation.AspNetCore.dll": {
             "related": ".xml"
           }
         },
@@ -433,13 +433,16 @@
       },
       "System.Diagnostics.DiagnosticSource/7.0.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
+          "lib/net6.0/System.Diagnostics.DiagnosticSource.dll": {
             "related": ".xml"
           }
         },
@@ -454,6 +457,22 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
       "System.Text.Encodings.Web/4.7.2": {
@@ -980,6 +999,31 @@
         "version.txt"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Text.Encodings.Web/4.7.2": {
       "sha512": "iTUgB/WtrZ1sWZs84F2hwyQhiRH6QNjQv2DkwrH+WP6RoFga2Q1m3f9/Q7FG8cck8AdHitQkmkXSY8qylcDmuA==",
       "type": "package",
@@ -1028,7 +1072,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net6.0": [
       "OpenTelemetry.Exporter.Console >= 1.5.0",
       "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.5.0",
       "OpenTelemetry.Exporter.Prometheus.AspNetCore >= 1.5.0-rc.1",
@@ -1061,7 +1105,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1069,8 +1113,8 @@
         "https://nuget.selise.biz/nuget": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -1086,8 +1130,8 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "OpenTelemetry.Exporter.Console": {
             "target": "Package",
@@ -1125,6 +1169,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1133,7 +1195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -1145,7 +1207,7 @@
       "message": "Package 'OpenTelemetry.Instrumentation.AspNetCore' 1.5.0-beta.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-vh2m-22xx-q94f",
       "libraryId": "OpenTelemetry.Instrumentation.AspNetCore",
       "targetGraphs": [
-        "net8.0"
+        "net6.0"
       ]
     },
     {
@@ -1155,7 +1217,7 @@
       "message": "Package 'OpenTelemetry.Instrumentation.Http' 1.5.0-beta.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-vh2m-22xx-q94f",
       "libraryId": "OpenTelemetry.Instrumentation.Http",
       "targetGraphs": [
-        "net8.0"
+        "net6.0"
       ]
     }
   ]

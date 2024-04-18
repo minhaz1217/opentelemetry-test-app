@@ -14,7 +14,6 @@ var countGreetings = greeterMeter.CreateCounter<int>("greetings.count", descript
 // Custom ActivitySource for the application
 var greeterActivitySource = new ActivitySource("OtPrGrJa.Example");
 
-var tracingOtlpEndpoint = builder.Configuration["OTLP_ENDPOINT_URL"];
 var otel = builder.Services.AddOpenTelemetry();
 
 // Configure OpenTelemetry Resources with the application name
@@ -32,6 +31,8 @@ otel.WithMetrics(metrics => metrics
     .AddPrometheusExporter());
 
 // Add Tracing for ASP.NET Core and our custom ActivitySource and export to Jaeger
+
+var tracingOtlpEndpoint = builder.Configuration["OTLP_ENDPOINT_URL"];
 otel.WithTracing(tracing =>
 {
     tracing.AddAspNetCoreInstrumentation();
@@ -78,7 +79,7 @@ async Task<String> SendGreeting(ILogger<Program> logger)
 async Task SendNestedGreeting(int nestlevel, ILogger<Program> logger, HttpContext context, IHttpClientFactory clientFactory)
 {
     // Create a new Activity scoped to the method
-    using var activity = greeterActivitySource.StartActivity("GreeterActivity");
+    using var activity = greeterActivitySource.StartActivity("GreeterActivityNested");
 
     if (nestlevel <= 5)
     {

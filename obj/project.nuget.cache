@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZQxWUG4kjhFjEYK2Eq1lVBM4qf8CVpJpqz9enT/9OckXNkbzVJn6tnkFBrR7JxC+MqKhb0IWaU5oYcdlogc++w==",
+  "dgSpecHash": "evXedI+5NeUBSvk4XNJPlnvQh/L1QAJUDBU8KAtdn/qbF5F75NMhly0ds0sP9pQv7RaNcInEMegV1srUjgV2yg==",
   "success": true,
   "projectFilePath": "D:\\MyComputer\\website\\c#\\OpenTelemetryTestApp\\OpenTelemetryTestApp.csproj",
   "expectedPackageFiles": [
@@ -32,8 +32,13 @@
     "C:\\Users\\HA HA\\.nuget\\packages\\opentelemetry.instrumentation.http\\1.5.0-beta.1\\opentelemetry.instrumentation.http.1.5.0-beta.1.nupkg.sha512",
     "C:\\Users\\HA HA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.0\\system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512",
     "C:\\Users\\HA HA\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\HA HA\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\HA HA\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
-    "C:\\Users\\HA HA\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+    "C:\\Users\\HA HA\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\HA HA\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\HA HA\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\HA HA\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\HA HA\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
   ],
   "logs": [
     {
@@ -43,7 +48,7 @@
       "message": "Package 'OpenTelemetry.Instrumentation.AspNetCore' 1.5.0-beta.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-vh2m-22xx-q94f",
       "libraryId": "OpenTelemetry.Instrumentation.AspNetCore",
       "targetGraphs": [
-        "net8.0"
+        "net6.0"
       ]
     },
     {
@@ -53,7 +58,7 @@
       "message": "Package 'OpenTelemetry.Instrumentation.Http' 1.5.0-beta.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-vh2m-22xx-q94f",
       "libraryId": "OpenTelemetry.Instrumentation.Http",
       "targetGraphs": [
-        "net8.0"
+        "net6.0"
       ]
     }
   ]
